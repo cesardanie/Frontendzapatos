@@ -1,0 +1,24 @@
+.tamano{
+
+    width: 300px;
+}
+.tamanodosimagen{
+    width: 200px;
+}
+.radio{
+
+    border-radius: 10%;
+}
+.espacio{
+
+    margin:50px;
+
+}
+.espaciodos{
+    
+    display: block;
+  color: wheat;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
