@@ -1,0 +1,128 @@
+.tamano_uno{
+
+    width: 18rem;
+    background-color:rgb(96,96,96);
+}
+.color_titulos{
+
+    color: cadetblue;
+}
+.container{
+    position: absolute;
+    background-color: rgb(96,96,96);
+    top: 100px;
+    right: 1100px;
+    width: 250px;
+    height: 170px;
+    border: 3px solid rgb(96,96,96);
+}
+.container_Dos{
+    position: absolute;
+    background-color: rgb(96,96,96);
+    top: 300px;
+    right: 1100px;
+    width: 250px;
+    height: 180px;
+    border: 3px solid rgb(96,96,96);
+}
+.container_tres{
+    position: absolute;
+    background-color: rgb(96,96,96);
+    top: 500px;
+    right: 1100px;
+    width: 250px;
+    height: 180px;
+    border: 3px solid rgb(96,96,96);
+}
+.container_cuatro{
+    position: absolute;
+    background-color: rgb(25,111,61);
+    top: 100px;
+    right: 700px;
+    width: 300px;
+    height: 500px;
+    border-radius: 100px solid rgb(25,111,61);
+}
+.container_cinco{
+    position: absolute;
+    background-color: rgb(241,196,15);
+    top: 100px;
+    right: 380px;
+    width: 300px;
+    height: 500px;
+    border-radius: 25px solid rgb(241,196,15);
+}
+.container_seis{
+    position: absolute;
+    background-color: rgb(231,76,60);
+    top: 100px;
+    right: 50px;
+    width: 300px;
+    height: 500px;
+    border-radius: 25px solid rgb(231,76,60);
+}
+.container_siete{
+    position: absolute;
+    background-color: rgb(96,96,96);
+    top: 700px;
+    right: 700px;
+    width: 300px;
+    height: 500px;
+    border-radius: 25px solid rgb(96,96,96);
+}
+.container_ocho{
+    position: absolute;
+    background-color: rgb(96,96,96);
+    top: 700px;
+    right: 1100px;
+    width: 250px;
+    height: 180px;
+    border: 3px solid rgb(96,96,96);
+}
+.container_nueve{
+    position: absolute;
+    background-color: rgb(96,96,96);
+    top: 900px;
+    right: 1100px;
+    width: 250px;
+    height: 180px;
+    border: 3px solid rgb(96,96,96);
+}
+.container_diez{
+    position: absolute;
+    background-color: rgb(96,96,96);
+    top: 1100px;
+    right: 1100px;
+    width: 250px;
+    height: 180px;
+    border: 3px solid rgb(96,96,96);
+}
+.acomodar{
+    position: absolute;
+    background-color: rgb(255,255,255);
+    top: 106px;
+    right: 1px;
+    width: 980px;
+    height: 510px;
+    border: 3px solid rgb(255,255,255);
+
+}
+.titulo_uno{
+
+    background-color: rgb(93,89,89);
+
+}
+.derecha_pantallados{
+
+    position: absolute;
+    background-color: rgb(93,89,89);
+    top: 100px;
+    right: 1000px;/*correr a la izquierda*/
+    width: 350px;/*ancho*/
+    height: 890px;/*Alto*/
+   
+
+}
+.color_boton{
+    background-color: rgb(93,89,89);
+}

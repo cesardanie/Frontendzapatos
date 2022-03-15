@@ -18,6 +18,8 @@ import Inicio from '../Componentes/Inicio';
 import Menu from '../Componentes/Menu';
 import PaginaTienda from './PaginaTienda';
 import CreacionProducto from '../Componentes/CreacionProducto';
+import ActivosSeguimiento from './AcitvosSeguimiento';
+import Creacionnuevoregistro from './Creacionnuevoregistro';
 
 
 
@@ -30,8 +32,11 @@ const Home =()=>
     <Router>
         <Menu/>
         <Switch>
+           
           <Route exact path="/" component={IniciarSesion} />
-            <Route exact path="/CreacionProducto" component={CreacionProducto}/>
+          <Route exact path="/Creacionnuevoregistro" component={Creacionnuevoregistro}/>
+          <Route exact path="/ActivosSeguimiento" component={ActivosSeguimiento}/>
+          <Route exact path="/CreacionProducto" component={CreacionProducto}/>
           <Route exact path="/PaginaAdmi" component={PaginaAdmi}/>
           <Route exact path="/PaginaTienda" component={PaginaTienda}/>
           <Route path="*" component={Error} />

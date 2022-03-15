@@ -2,7 +2,7 @@ import React,{useState,Fragment} from 'react';
 import { Formik } from 'formik';
 import '../Estilos/StylosHome.css';
 import axios from 'axios';
-import imagenlogo from'../img/Logoim.PNG';
+import imagenlogo from'../img/Logo1.PNG';
 import Boton from'../Componentes/Boton';
 import Registro from '../Paginas/Registro';
 import {
@@ -26,29 +26,26 @@ const IniciarSesion =()=>
     const [Formularioenviado,cambiarformulario]=useState(false);
     return(
         <Fragment>
-
-      
-
         <Formik
         initialValues={{
-             correo:'',
-             contraseña:'',
+             Correo:'',
+             Contraseña:'',
            
             
         }}
         validate={(valores)=>{
             let errores={};
            
-            if(!valores.correo)
+            if(!valores.Correo)
             {
-                errores.correo="por favor ingresa un correo";
+                errores.Correo="por favor ingresa un correo";
             
 
             }
-            if(!valores.contraseña)
+            if(!valores.Contraseña)
             {
 
-                errores.contraseña="por favor ingresa contraseña";
+                errores.Contraseña="por favor ingresa contraseña";
             }
            
       
@@ -58,31 +55,16 @@ const IniciarSesion =()=>
         onSubmit={(valores,{resetForm})=>{
            
            
-            ////  cmabio el estado del formulario    
-            cambiarformulario(true);
+            ////  cmabio el estado del formulario
+            console.log(valores);
+          
             var a=Enviarusuario(valores);
             console.log(a);
+            cambiarformulario(true);
             a.then((successMessage) => {
                
                 console.log(successMessage);
-                if(successMessage.tipodeRolAutenticado=="Administrador")
-                {
-                        window.alert("Bienvenido estas Ingresado como Administrador");
-                        window.open("/PaginaAdmi");
-                }
-                if(successMessage.tipodeRolAutenticado=="Comprador")
-                {
-                    window.alert("Bienvenido estas Ingresado como Comprador");
-                    window.open("/PaginaTienda");
-                }
-                if(successMessage.validacion===false)
-                {   
 
-                    window.alert("Su usuario o Contraseña no conciden");
-                    window.open("/");
-
-                }
-               
              
            });
             ///reseteo el formulario
@@ -106,16 +88,16 @@ const IniciarSesion =()=>
                                 <label htmlFor="correo" className="text-primary">Correo</label>
                                 <br/>
                                 <br/>
-                                <input className="col-sm-6 " onBlur={handleBlur} onChange={handleChange} type="text" id="correo" name="correo" placeholder="digite su correo"value={values.correo}/>
+                                <input className="col-sm-6 " onBlur={handleBlur} onChange={handleChange} type="text" id="Correo" name="Correo" placeholder="digite su correo"value={values.Correo}/>
                                 <br/>
-                                {touched.correo &&  errors.correo &&<div className="text-danger">{errors.correo}</div>}
+                                {touched.Correo &&  errors.Correo &&<div className="text-danger">{errors.Correo}</div>}
                                 <br/>
                                 <label className="text-primary">Contraseña</label>
                                 <br/>
                                 <br/>
-                                <input className="col-sm-6" onBlur={handleBlur} onChange={handleChange} type="password" id="contraseña" name="contraseña" placeholder="digite su Contraseña"value={values.contraseña}/>
+                                <input className="col-sm-6" onBlur={handleBlur} onChange={handleChange} type="password" id="Contraseña" name="Contraseña" placeholder="digite su Contraseña"value={values.Contraseña}/>
                                 <br/>
-                                {touched.contraseña &&  errors.contraseña &&<div className="text-danger">{errors.contraseña}</div>}
+                                {touched.Contraseña &&  errors.Contraseña &&<div className="text-danger">{errors.Contraseña}</div>}
                                 <br/>
                                 <button type="submit"className="btn btn-primary" >Iniciar Sesion</button>
                                 
@@ -145,7 +127,7 @@ export default IniciarSesion;
 export async function Enviarusuario(Datos){
     try{
 
-      const url='https://localhost:44306/api/Usuarios'
+      const url='http://localhost:54795/UsuarioMaestro'
       const response= await axios(
           {
              url:`${url}`,
